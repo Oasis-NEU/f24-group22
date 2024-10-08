@@ -1,10 +1,13 @@
 import React from "react";
-import NavbarCustom from ".././components/Navbar";
+// import NavbarCustom from ".././components/Navbar";
 
 function HomePage() {
   return (
     <>
-      <NavbarCustom />
+      {/* <NavbarCustom /> */}
+      <div>
+        <h1>Welcome to the Home Page</h1>
+      </div>
     </>
   );
 }
