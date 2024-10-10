@@ -4,7 +4,7 @@ function Bottom() {
     return (
         <div className="bottom-bar">
             <div className="bottom-column">
-                <div className="bottom-large"><i class="bi bi-rocket-takeoff" style={{marginRight : "7px"}}></i>Booster.nu</div>
+                <div className="bottom-large"><i className="bi bi-rocket-takeoff" style={{marginRight : "7px"}}></i>Booster.nu</div>
                 <div className="bottom-text">Support Our Mission</div>
                 <div className="bottom-text">Join Our Team</div>
                 <div className="bottom-text">Example Item</div>

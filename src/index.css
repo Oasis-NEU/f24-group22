@@ -86,25 +86,29 @@ button:focus-visible {
   background-size: cover;
   }
   .banner-title {
-    font-size: 60px;
-    margin: 30px 10px 10px 10px;
+    /*font-size: 60px;*/
+    font-size: calc(2vw + 30px);
+    margin: 30px 30px 10px 30px;
     font-weight: 700;
     color: #ffffff;
     overflow: hidden;
-    white-space: nowrap;
+    text-align: center;
   }
   .banner-subtitle {
-    font-size: 24px;
+    font-size: calc(0.4vw + 18px);
     font-weight: 400;
     color: #ffffff;
-    white-space: nowrap;
+    text-align: center;
+    margin: 0 30px 0 30px;
   }
 
-.white-section {
-  display: flex;
-  flex-direction: row;
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: fit-content;
   padding: 20px;
   justify-content: center;
+  margin: 0 auto;
   }
 
 .stat {
@@ -119,6 +123,11 @@ button:focus-visible {
   margin: 20px;
   width: 220px;
   height: 300px;
+  }
+@media (max-width: 1000px) {
+    .stats {
+      grid-template-columns: 1fr;
+    }
   }
   .stat:hover {
     box-shadow: 0px 10px 15px #00000033;
@@ -168,6 +177,24 @@ button:focus-visible {
     margin-top: 20px;
     width: 500px;
     letter-spacing: 0.2px;
+  }
+  @media (max-width: 1000px) {
+    .animation-window {
+      display: flex;
+      padding-left: 50px;
+      padding-right: 50px;
+      height: 700px;
+      }
+    .animation-title {
+      text-align: center;
+      width: auto;
+      justify-content: center;
+    }
+    .animation-subtitle {
+      text-align: center;
+      width: auto;
+      margin-bottom: 300px;
+    }
   }
 .animation {
   background-color: white;
@@ -231,6 +258,28 @@ button:focus-visible {
       box-shadow: 0px 10px 35px #d4844e86;
       transform: translateY(-5px);
     }
+    @media (max-width: 1000px) {
+      .shares-window {
+        flex-direction: column;
+        height: 500px;
+        padding: 70px 50px;
+      }
+      .shares {
+        margin: 0 0 40px 0;
+      }
+      .shares-text {
+        margin: 0 auto;
+        text-align: center;
+      }
+      .shares-title {
+        width: auto;
+        text-align: center;
+        justify-content: center;
+      }
+      .shares-subtitle {
+        width: auto;
+      }
+    }
 
 
 .bottom-bar {
@@ -244,7 +293,7 @@ button:focus-visible {
   .bottom-column {
     display: flex;
     flex-direction: column;
-    padding: 10px 120px;
+    padding: 10px calc(14vw - 60px);
   }
   .bottom-large {
     display: flex;

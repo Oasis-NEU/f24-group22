@@ -17,7 +17,7 @@ function HomePage() {
           </div>
           <button>Get Started</button>
         </div>
-        <div className="white-section">
+        <div className="stats">
           <Statistic keyword="Simple, but Powerful." content="Booster is built to make you faster, without cluttering your space. Like an extension of your brain, but on the web." icon="bi-lightning-charge-fill"></Statistic>
           <Statistic keyword="Built for Collaboration." content="From the very beginning, Booster was designed to make your productivity live in the cloud." icon="bi-cloud-fill"></Statistic>
           <Statistic keyword="Free and Open Source." content="Booster was developed by students who wanted to solve a problem, not to make a profit." icon="bi-code-slash"></Statistic>
@@ -31,7 +31,7 @@ function HomePage() {
           </div>
         </div>
         {/*
-        <div className="white-section" style={{flexDirection : "column"}}>
+        <div className="stats" style={{flexDirection : "column"}}>
           <div className="centered-heading">
             Join the Booster Team
           </div>

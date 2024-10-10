@@ -22,10 +22,18 @@ const MouseTracker = () => {
                                   [0, 0],
                                   [0, 0]]);
 
-  const offsetRef = useRef(0);                              
+  const offsetRef = useRef(0);
+  const distanceRef = useRef(0);                             
   const springConstant = 0.05; // Adjust this to control the stiffness
   const dampingCoefficient = 0.84; // Adjust this to control the damping effect
 
+  let displacement = [0,0]
+  let distance = 0
+  if (window.innerWidth < 1000) {
+    distance = 0;
+    distanceRef.current = distance
+    displacement = [-860, 1100]
+  }
   // Function to update the mouse position state
   const handleMouseMove = (event) => {
     setMousePosition({
@@ -34,7 +42,14 @@ const MouseTracker = () => {
     });
     setScrollY(window.scrollY);
 
-    let distance = Math.sqrt(Math.pow((event.clientX - 1080), 2) + Math.pow((event.clientY + window.scrollY - 1000), 2));
+    if (window.innerWidth >= 1000) {
+      distanceRef.current = Math.sqrt(Math.pow((event.clientX - 1080), 2) + Math.pow((event.clientY + window.scrollY - 1000), 2));
+    }
+    console.log(distanceRef.current);
+    distance = distanceRef.current
+      //console.log(window.innerWidth);
+    //console.log(distance);
+    
     if (distance >= 300) {
         distance = 300 + (distance - 300) / 4;
     } else {
@@ -107,7 +122,7 @@ const MouseTracker = () => {
         <div
           className="animation"
           style={{
-            transform: `translate(${pos[0][0] * scaling}px, ${pos[0][1] * scaling}px)`,
+            transform: `translate(${pos[0][0] * scaling + displacement[0]}px, ${pos[0][1] * scaling + displacement[1]}px)`,
           }}
         >
           Do Homework
@@ -115,7 +130,7 @@ const MouseTracker = () => {
         <div
           className="animation"
           style={{
-            transform: `translate(${pos[1][0] * scaling}px, ${pos[1][1] * scaling}px)`,
+            transform: `translate(${pos[1][0] * scaling + displacement[0]}px, ${pos[1][1] * scaling + displacement[1]}px)`,
           }}
         >
           English HW
@@ -123,7 +138,7 @@ const MouseTracker = () => {
         <div
           className="animation"
           style={{
-            transform: `translate(${pos[2][0] * scaling}px, ${pos[2][1] * scaling}px)`,
+            transform: `translate(${pos[2][0] * scaling + displacement[0]}px, ${pos[2][1] * scaling + displacement[1]}px)`,
           }}
         >
           Math HW
@@ -131,7 +146,7 @@ const MouseTracker = () => {
         <div
           className="animation"
           style={{
-            transform: `translate(${pos[3][0] * scaling}px, ${pos[3][1] * scaling}px)`,
+            transform: `translate(${pos[3][0] * scaling + displacement[0]}px, ${pos[3][1] * scaling + displacement[1]}px)`,
           }}
         >
           Complete Problems
@@ -139,7 +154,7 @@ const MouseTracker = () => {
         <div
           className="animation"
           style={{
-            transform: `translate(${pos[4][0] * scaling}px, ${pos[4][1] * scaling}px)`,
+            transform: `translate(${pos[4][0] * scaling + displacement[0]}px, ${pos[4][1] * scaling + displacement[1]}px)`,
           }}
         >
           Upload Photos
