@@ -160,12 +160,12 @@ button:focus-visible {
   flex-direction: column;
   height: 400px;
   background: linear-gradient(90deg, #333333, #555555);
-  padding-left: 120px;
+  padding-left: calc(15vw - 80px);
   justify-content: center;
   }
   .animation-title {
     display: flex;
-    font-size: 47px;
+    font-size: calc(1vw + 40px);
     font-weight: 700;
     color: #ffffff;
   }
@@ -201,7 +201,7 @@ button:focus-visible {
   width: 300px;
   padding: 11px 14px;
   position: absolute;
-  left: 900px;
+  left: calc(-150px + 70vw);
   top: 1100px;
   border: 1px solid rgb(187, 187, 187);
   border-radius: 11px;
@@ -226,12 +226,12 @@ button:focus-visible {
     /*border: 1px solid black;*/
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
+    margin-left: calc(19vw - 140px);
   }
   .shares-title {
     /*border: 1px solid black;*/
     display: flex;
-    font-size: 47px;
+    font-size: calc(1vw + 40px);
     font-weight: 700;
     color: #222222;
   }
@@ -259,6 +259,9 @@ button:focus-visible {
       transform: translateY(-5px);
     }
     @media (max-width: 1000px) {
+      .animation {
+        left: calc(600px + 60vw);
+      }
       .shares-window {
         flex-direction: column;
         height: 500px;
