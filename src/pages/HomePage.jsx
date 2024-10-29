@@ -2,12 +2,12 @@ import React from "react";
 import Animation from ".././components/Animation";
 import Statistic from ".././components/Statistic";
 import Bottom from ".././components/Bottom";
-// import CustomNavbar from ".././components/Navbar";
+import FreshNavbar from ".././components/Navbar";
 
 function HomePage() {
   return (
     <>
-        {/* <NavbarCustom /> */}
+        <FreshNavbar />
         <div className="banner">
           <div className="banner-title">
             Boost yourself to new heights.
@@ -39,7 +39,7 @@ function HomePage() {
             <i>Become one of the talented developers working on making Booster even better. (Coming Soon)</i>
           </div>
         </div>*/}
-        <Bottom></Bottom>
+        <Bottom />
     </>
   );
 }

@@ -76,7 +76,7 @@ button:focus-visible {
 
 .banner {
   display: flex;
-  height: 400px;
+  height: 440px;
   width: 100%;
   background-color: #da5d5d;
   justify-content: center;
@@ -88,7 +88,7 @@ button:focus-visible {
   .banner-title {
     /*font-size: 60px;*/
     font-size: calc(2vw + 30px);
-    margin: 30px 30px 10px 30px;
+    margin: 50px 30px 10px 30px;
     font-weight: 700;
     color: #ffffff;
     overflow: hidden;
@@ -202,7 +202,7 @@ button:focus-visible {
   padding: 11px 14px;
   position: absolute;
   left: calc(-150px + 70vw);
-  top: 1100px;
+  top: 1130px;
   border: 1px solid rgb(187, 187, 187);
   border-radius: 11px;
   box-shadow: 0 8px 8px #00000033;
