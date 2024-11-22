@@ -3,6 +3,7 @@ import Animation from ".././components/Animation";
 import Statistic from ".././components/Statistic";
 import Bottom from ".././components/Bottom";
 import FreshNavbar from ".././components/Navbar";
+import '.././assets/styles/HomePage.css';
 
 function HomePage() {
   return (

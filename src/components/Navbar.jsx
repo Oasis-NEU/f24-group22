@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.css';
+import LoginSignupBtns from "./LoginSignup";
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import '.././assets/styles/Navbar.css';
 
 function UserNavbar() {
   return (
@@ -14,6 +16,19 @@ function UserNavbar() {
       </div>
     </>
   );
+}
+
+function NavLinks() {
+  return (
+    <>
+      <Link to="/login" className="navbar-button nb-black">
+        Log In
+      </Link>
+      <Link to="/login" className="navbar-button nb-white">
+        Create Account
+      </Link>
+    </>
+  )
 }
 
 function FreshNavbar() {
@@ -36,8 +51,7 @@ function FreshNavbar() {
       <div className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className={`navbar-title ${scrolled ? 'navbar-title-scrolled' : ''}`}><i className="bi bi-rocket-takeoff" style={{marginRight : "7px"}}></i><i>Booster.nu</i></div>
         <div className="navbar-right">
-          <div className="navbar-button nb-black">Log In</div>
-          <div className="navbar-button nb-white">Create Account</div>
+          <NavLinks />
         </div>
       </div>
     </>
